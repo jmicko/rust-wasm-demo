@@ -1,0 +1,17 @@
+# Compiled files
+/rust-wasm-demo/target/
+
+# Dependency directories
+Cargo.lock
+Cargo.toml.orig
+
+# Generated files
+Cargo.toml.orig
+Cargo.toml.bk
+
+# Node.js dependencies
+/js/node_modules
+
+# Environment variables
+.env
+.env.*

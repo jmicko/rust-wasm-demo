@@ -1,0 +1,1 @@
+I'm about to try to compile rust code to wasm and run it in node.js and nobody can stop me.
