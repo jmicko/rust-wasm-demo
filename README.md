@@ -15,6 +15,8 @@ This is my attempt at demonstrating that.
 
 Not sure on best practice here, but I need to write something here that I can reference later. I'll update later when I understand it better. The assumption is that you have rust and wasm-pack installed.
 
+### For Node.js
+
 1. Compile the rust binary with `wasm-pack build --target nodejs`. You need to do this from within the `rust` directory. This will create a `pkg` directory with a few files in it. This is the package that npm will use to install the wasm module.
 
 2. Install the wasm module with `npm install` from inside the `js` directory. This will install the wasm module into the `node_modules` directory.
@@ -28,3 +30,7 @@ Not sure on best practice here, but I need to write something here that I can re
 2. Compile the rust code again with `wasm-pack build --target nodejs` inside the `rust` directory.
 
 3. npm install again with `npm install` inside the `js` directory.
+
+### For the browser (react etc)
+
+just do the same steps as above but change the target to `web` instead of `nodejs`. So the new command is `wasm-pack build --target nodejs`. Then you can import the wasm module into your react app or whatever.
