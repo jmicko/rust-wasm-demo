@@ -2,9 +2,26 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+// import rust from 'rust-wasm-demo'
+import init, {
+  add, double_age
+} from '../node_modules/rust-wasm-demo'
+
+await init();
+
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const sum = add(1, 2);
+  console.log(sum, 'sum');
+
+  const person2 = {name:'John', age: 35};
+  console.log('person', person2);
+  console.log('person.age', person2.age);
+
+  const doubled_age = double_age(person2);
+  console.log('doubled_age', doubled_age);
 
 
   // options object should have the following keys
